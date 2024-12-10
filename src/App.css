@@ -1,0 +1,54 @@
+
+  
+  .input-section {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .choices ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .wheel-container {
+    margin: 20px 0;
+  }
+  
+  .wheel {
+    width: 260px;
+    height: 260px;
+    border: 5px solid #6a5ca6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    margin: 20px auto;
+  }
+  
+  .spinning {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
