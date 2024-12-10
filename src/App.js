@@ -44,7 +44,7 @@ function App() {
 
     const emoji = (index) => {
 
-        return index % 2 == 0 ? <span>&#128540; </span> : <span>&#128541; </span>
+        return index % 2 === 0 ? <span>&#128540; </span> : <span>&#128541; </span>
     }
 
     return (
