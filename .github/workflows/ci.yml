@@ -26,3 +26,9 @@ jobs:
 
             - name: "Check if package .json is present"
               run: ls
+
+            - name: "Upload build files"
+              uses: actions/upload-artifact@v4
+              with:
+                name: build folder
+                path: build
