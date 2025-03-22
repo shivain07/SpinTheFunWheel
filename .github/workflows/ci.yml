@@ -1,0 +1,16 @@
+name: Sample react CI pipeline
+ 
+on:
+    push:
+        branches:
+            - main
+            - master
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Setup Node JS"
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18
