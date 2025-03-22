@@ -1,4 +1,4 @@
-name: Sample react CI pipeline
+name: "Sample react CI pipeline"
  
 on:
     push:
