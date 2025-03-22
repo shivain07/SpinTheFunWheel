@@ -18,7 +18,7 @@ jobs:
             - name: "Setup Node JS"
               uses: actions/setup-node@v4
               with:
-                node-version: 18
+                node-version: 21
 
             - name: "Setup vercel cli"
               run: npm i -g vercel
@@ -28,10 +28,10 @@ jobs:
               with:
                 name: build #this name should be same as the name given to build folder in ci pipeline
                 # below are necessary configuration for the job to know the workflow id and github token
-                run-id: ${{github.event.workflow_run.id}}
-                github-token: ${{github.token}}
+                run-id: ${{ github.event.workflow_run.id }}
+                github-token: ${{ github.token }}
 
             - name: "Deploy to vercel"
-              run: vercel --prod --token=${{secrets.VERCEL_TOKEN}} --yes --project-name=cicdproject
+              run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name=cicdproject
 
 
